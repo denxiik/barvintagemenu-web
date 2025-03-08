@@ -1,0 +1,100 @@
+/* -------------------------
+   BASIC RESET
+------------------------- */
+@font-face {
+    font-family: 'Lucida Grande';
+    src: url('../font/Lucida-Grande.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Lucida Grande';
+    background-color: #181a1b;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------------
+   HOME SECTION
+------------------------- */
+.home {
+    /* Gradient plus background image */
+    background:
+        url("../img/toast_doTHEBEST.jpg") center/cover no-repeat;
+
+    /* Container settings */
+    width: 95%;
+    margin: 1rem auto;
+    position: relative;
+    border-radius: 30px;
+    min-height: calc(90vh);
+    overflow: hidden;
+
+    /* Flexbox to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+/* Stats card in the bottom-right corner */
+.home-stats-card {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(30, 32, 34, 0.7);
+    min-width: 50%;
+
+    /* Specific corner rounding */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    /* Increase padding for a larger card */
+    padding: 2rem 0.5rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.home-stats-card .stat {
+    text-align: center;
+    flex: 1;
+}
+
+.home-stats-card .stat h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Simple responsive fix (example for smaller screens) */
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+    .home {
+        min-height: calc(70vh);
+    }
+}
+
+/* Small devices (phones, 768px and down) */
+@media (max-width: 768px) {
+    /* -------------------------
+        HOME SECTION
+    ------------------------- */
+    .home-stats-card .stat h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .home-stats-card .stat h2 {
+        font-size: 4rem;
+    }
+}
