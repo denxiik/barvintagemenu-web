@@ -24,10 +24,6 @@ body {
    HOME SECTION
 ------------------------- */
 .home {
-    /* Gradient plus background image */
-    background:
-        url("../img/toast_doTHEBEST.jpg") center/cover no-repeat;
-
     /* Container settings */
     width: 95%;
     margin: 1rem auto;
@@ -41,6 +37,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    margin-bottom: 5rem;
 }
 
 /* Stats card in the bottom-right corner */
@@ -74,11 +71,23 @@ body {
     font-weight: bold;
 }
 
+.toast-doTHEBEST {
+    /* background image */
+    background:
+        url("../img/toast_doTHEBEST.jpg") center/cover no-repeat;
+}
+
+.toast-vintage {
+    /* background image */
+    background:
+        url("../img/toast_vintage.jpg") center/cover no-repeat;
+}
+
 /* Simple responsive fix (example for smaller screens) */
 /* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
     .home {
-        min-height: calc(70vh);
+        min-height: calc(50vh);
     }
 }
 
